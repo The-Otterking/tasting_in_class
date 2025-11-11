@@ -31,7 +31,25 @@ h1,h2,h3,h4,h5,h6{
     font-family: var(--font-heading);
     margin-bottom: 0.5rem;
 }
-
+/******************buttons************************/
+.btn{
+    border: none;
+    border-radius: var(--spacing-2);
+    padding: var(--spacing-1) var(--spacing-2);
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+.btn-secondary{
+    background-color: var(--muted);
+    color: var(--dark);
+}
+.link{
+    color: var(--primary);
+    text-decoration: underline;
+}
 /**************** colours*****************/
 .bg-primary{background-color: var(--primary)}
 .bg-light{background-color: var(--light)}
