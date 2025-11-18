@@ -4,9 +4,15 @@
 /*variables for this website*/
 :root{
     --primary:#7b4b2d; 
+    --primary-tint:#a26c4d; 
+    --primary-shade:#562c11; 
+    
     --light:#ffffff;
     --dark:#363029;
-    --muted: #f8f6f5;
+
+    --muted: #e8e6e5;
+    --muted-tint: #f8f6f5;
+    --muted-shade: #c8c6c5;
 
     --font-normal: Roboto, Arial, sans-serif;
     --font-heading:"Noto Serif", serif;
@@ -15,10 +21,14 @@
     --spacing-1:0.5rem; /*8px*/
     --spacing-2:1rem; /*16px*/
     --spacing-3:2rem;/*32px*/
+    --shadow-dark:0 0.1rem 0.2rem 0.1rem rgba(45, 48, 41, 0.2);
+    --shadow-light:0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
 }
 
 /*css reset*/
 *{
+    box-sizing: border-box; 
+    /*will force elements to scale from the border insted*/
     margin: 0;
     padding: 0;
 }
@@ -42,13 +52,31 @@ h1,h2,h3,h4,h5,h6{
     background-color: var(--primary);
     color: var(--light);
 }
+.btn-primary:hover{
+    background-color: var(--primary-tint);
+}
+.btn-primary:active{
+    background-color: var(--primary-shade);
+}
 .btn-secondary{
     background-color: var(--muted);
     color: var(--dark);
 }
+.btn-secondary:hover{
+    background-color: var(--muted-tint);
+}
+.btn-secondary:active{
+    background-color: var(--muted-shade);
+}
 .link{
     color: var(--primary);
     text-decoration: underline;
+}
+.link:hover{
+    color: var(--primary-tint);
+}
+link:active{
+    color: var(--primary-shade);
 }
 /**************** colours*****************/
 .bg-primary{background-color: var(--primary)}
@@ -60,6 +88,29 @@ h1,h2,h3,h4,h5,h6{
 .text-light{color: var(--light);}
 .text-dark{ color: var(--dark)}
 .text-muted{color: var(--muted)}
+/*********************componets*************************/
+.product-image{
+    position: relative;
+    /*this will tell the product to go wher it has to b=go by force*/
+}
+.product-image img{
+    aspect-ratio: 16/9;
+    width:100%;
+    object-fit: cover;
+    border: 4px solid var(--light);
+    border-radius: var(--spacing-1);
+    box-shadow: var(--shadow-dark);
+}
+.product-image .product-tag{
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: var(--shadow-light);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--spacing-3);
+    position: absolute;
+    top: var(--spacing-2);
+    left: var(--spacing-2);
+}
 /*********************layout****************************/
 .d-flex{ display: flex;}
 .flex-between{
@@ -74,6 +125,10 @@ h1,h2,h3,h4,h5,h6{
 .grid-3col{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+}
+.grid-4col{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 /*******************spacing***********************/
 .m-0{ margin: var(--spacing-0);}
@@ -99,7 +154,7 @@ h1,h2,h3,h4,h5,h6{
     height: 4rem;
     width: 4rem;
     border-radius: 100%;
-    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(45, 48, 41, 0.2);
+    box-shadow: var(--shadow-dark);
 }
 .swatch.swatch-name{
     text-align: centers;
