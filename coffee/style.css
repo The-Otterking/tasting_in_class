@@ -88,6 +88,9 @@ link:active{
 .text-light{color: var(--light);}
 .text-dark{ color: var(--dark)}
 .text-muted{color: var(--muted)}
+
+.shadow-dark{box-shadow: var(--shadow-dark);}
+.shadow-light{box-shadow: var(--shadow-light);}
 /*********************componets*************************/
 .product-image{
     position: relative;
@@ -111,7 +114,23 @@ link:active{
     top: var(--spacing-2);
     left: var(--spacing-2);
 }
+.tags{
+    display: flex;
+    gap: var(--spacing-1);
+    list-style: none;
+}
+.tags .tag-item{
+    background-color: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: var(--spacing-2);
+    padding: var(--spacing-1) var(--spacing-2);
+}
 /*********************layout****************************/
+.container{
+    max-width: 1250px;
+    margin: var(--spacing-3) auto var(--spacing-0);
+}
 .d-flex{ display: flex;}
 .flex-between{
     justify-content: space-between;
