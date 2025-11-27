@@ -3,16 +3,16 @@
 
 /*variables for this website*/
 :root{
-    --primary:#7b4b2d; 
-    --primary-tint:#a26c4d; 
-    --primary-shade:#562c11; 
+    --primary:#000043;; 
+    --primary-tint:#020279;; 
+    --primary-shade:#000020;; 
     
-    --light:#ffffff;
-    --dark:#363029;
+    --light:#FFFDF7;
+    --dark:#000024;;
 
-    --muted: #e8e6e5;
-    --muted-tint: #f8f6f5;
-    --muted-shade: #c8c6c5;
+    --muted: #F2DAEE;;
+    --muted-tint: #f5ecf3;;
+    --muted-shade: #c1b1bf;;
 
     --font-normal: Roboto, Arial, sans-serif;
     --font-heading:"Noto Serif", serif;
